@@ -19,6 +19,10 @@ h1 {
     font-size: 58px;
 }
 
+h2 {
+    font-size: 34px;
+}
+
 h1, h3, p{
     margin: 0;
 }
@@ -41,7 +45,7 @@ h3 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     background-color: #fcfcfc;
-    box-shadow: 2px 0px 8px rgba(155, 42, 42, 0.1);
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.1);
 }
 
 .page-layout section div:first-child{
@@ -65,8 +69,8 @@ h3 {
 
 .page-layout main header{
     position: relative;
-    padding: 0px 64px 64px 64px;
-    box-shadow: 0px 2px 8px rgba(155, 42, 42, 0.1);
+    padding: 0px 10% 64px 10%;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .page-layout main header h1{
@@ -137,11 +141,15 @@ h3 {
 
 .main-content {
     background-color: #f7fcff;
-    padding: 56px 64px 64px 64px;
+    padding: 56px 10% 64px 10%;
     display: grid;
     grid-template-columns: 3fr 2fr;
 }
 
+.portfolio-content{
+    padding: 56px 10% 64px 10%;
+    text-align: center;
+}
 
 .cards-area{
     display: grid;
@@ -150,15 +158,19 @@ h3 {
     max-width: 472px;
     height: fit-content;
 }
-.card {
+.card, .text-card {
     display: grid;
     grid-template-columns: auto 1fr;
     background: white;
     width: fit-content;
     height: fit-content;
     border-radius: 12px;
-    box-shadow: 2px 0px 8px rgba(155, 42, 42, 0.1);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     padding: 18px 24px;
+}
+
+.text-card{
+    grid-row-gap: 12px;
 }
 
 .center-img{
@@ -183,4 +195,48 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.portfolio-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 48px;
+}
+
+.portfolio-card{
+    margin: 12px;
+    width: 300px;
+    height: 300px;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-card-mask{
+    cursor: pointer;
+    position: initial;
+    width: 300px;
+    height: 300px;
+    background-color: #e92042;
+    border: 0px;    
+    border-radius: 15px;
+    opacity: 0;
+
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 400;
+
+    -webkit-transition: opacity 0.5s, transform 0.5s ease-out;
+    -moz-transition: opacity 0.5s, transform 0.5s ease-out;
+    -ms-transition: opacity 0.5s, transform 0.5s ease-out;
+    transition: opacity 0.5s, transform 0.5s ease-out;
+}
+
+.portfolio-card-mask:hover {
+    outline: none;
+    opacity: 100;
 }
