@@ -48,7 +48,7 @@ footer p a{
     grid-template-columns: 120px 1fr;
 }
 
-.page-layout section {
+.page-layout > section {
     z-index: 1;
     display: grid;
     padding: 24px 12px;
@@ -65,7 +65,7 @@ footer p a{
 }
 
 
-.page-layout section nav{
+.page-layout > section > nav{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -79,23 +79,23 @@ footer p a{
     height: 100vh;
 }
 
-.page-layout main header{
+.page-layout > main > header{
     position: relative;
     padding: 0px 10% 64px 10%;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.page-layout main header h1{
+.page-layout > main > header > h1{
     margin-right: 36px;
 }
 
-.page-layout main header nav{
+.page-layout > main > header > nav{
     display: flex;
     justify-content: flex-end;
     padding: 24px;
 }
 
-.page-layout main header nav a{
+.page-layout > main > header > nav > a{
     cursor: pointer;
     text-decoration: none;
     color: black;
@@ -105,7 +105,7 @@ footer p a{
     transition: 0.3s ease-out;
 }
 
-.page-layout main header nav a:hover{
+.page-layout main > header > nav > a:hover{
     font-weight: 600;
 }
 
@@ -253,4 +253,43 @@ footer p a{
 .portfolio-card-mask:hover {
     outline: none;
     opacity: 100;
+}
+
+
+/* RESPONSIVE-------------*/
+@media (max-width: 900px) {
+    .page-layout{
+        grid-template-columns: 1fr;
+    }
+    
+    .page-layout > section {
+        display: none;
+    }
+
+    .header-banner, .main-content{
+        grid-template-columns: 1fr;
+    }
+
+    .header-pic {
+        display: none;
+        position: relative;
+    }
+
+    .rocket-img{
+        margin: 64px 0px;
+    }
+}
+
+@media (max-width: 512px){
+    h1{
+        font-size: 42px;
+    }
+
+    .page-layout > main > header > nav{
+        justify-content: space-between;
+    }
+
+    .page-layout > main > header > nav > a{
+        margin: 0px 6px;
+    }
 }
