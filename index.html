@@ -15,21 +15,29 @@
                 <img class="logo" src="icons/unicorn.png">
             </div>
             <nav>
-                <button class="icon-btn" ><img src="icons/instagram.png"></button>
-                <button class="icon-btn" ><img src="icons/twitter.png"></button>
-                <button class="icon-btn" ><img src="icons/youtube.png"></button>
-                <button class="icon-btn" ><img src="icons/whatsapp.png"></button>
+                <a href="https://www.instagram.com/andrs.dev/">
+                    <button class="icon-btn" ><img src="icons/instagram.png"></button>
+                </a>
+                <a href="https://twitter.com/AndrsDev">
+                    <button class="icon-btn" ><img src="icons/twitter.png"></button>
+                </a>
+                <a href="https://www.youtube.com">
+                    <button class="icon-btn" ><img src="icons/youtube.png"></button>
+                </a>
+                <a href="https://www.whatsapp.com/">
+                    <button class="icon-btn" ><img src="icons/whatsapp.png"></button>
+                </a>
             </nav>
         </section>
         <main>
             <header>
                 <nav>
-                    <a>Inicio</a>
-                    <a>Sobre mí</a>
-                    <a>Portafolio</a>
+                    <a href="#home">Inicio</a>
+                    <a href="#about">Sobre mí</a>
+                    <a href="#portfolio">Portafolio</a>
                 </nav>
                 <div class="header-banner">
-                    <h1>Unicornio Web Profesional</h1>
+                    <h1 id="home">Unicornio Web Profesional</h1>
                     <div class="pic-container">
                         <div class="header-pic">
                             <img src="icons/image.png"> 
@@ -68,7 +76,7 @@
                 </div>
 
                 <div>
-                    <h2>Sobre mí</h2>
+                    <h2 id="about">Sobre mí</h2>
                     <div class="text-card">
                         <p>
                             Aquí puedes escribir algo bien chido sobre tí, lo que te gusta 
@@ -82,7 +90,7 @@
             </div>
 
             <div class="portfolio-content">
-                <h2>Proyectos</h2>
+                <h2 id="portfolio">Proyectos</h2>
                 <div class="portfolio-items">
                     <div class="portfolio-card" style="background-image: url(./img/pensumb.png)">
                         <a href="https://pensumb.firebaseapp.com/" target="_blank">
@@ -96,6 +104,10 @@
                     </div>
                 </div>
             </div>
+
+            <footer>
+                <p>Built with <strong>passion</strong> by <a href="https://www.instagram.com/andrs.dev/">Andrés Sanabria</a></p>
+            </footer>
         </main>
     </div>
     
